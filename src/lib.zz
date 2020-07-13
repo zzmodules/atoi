@@ -1,0 +1,28 @@
+using <stdlib.h> as stdlib
+using "native.h"::{ long_long_t }
+
+using types::{ long }
+
+export fn atoi(char *str) -> int
+  where len(str) > 0
+  where safe(str)
+  where nullterm(str)
+{
+  return unsafe<int>(stdlib::atoi(str));
+}
+
+export fn atol(char *str) -> long
+  where len(str) > 0
+  where safe(str)
+  where nullterm(str)
+{
+  return unsafe<long>(stdlib::atol(str));
+}
+
+export fn atoll(char *str) -> long_long_t
+  where len(str) > 0
+  where safe(str)
+  where nullterm(str)
+{
+  return unsafe<long_long_t>(stdlib::atoll(str));
+}

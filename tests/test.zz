@@ -1,0 +1,16 @@
+using atoi::{ atoi, atol, atoll }
+using log
+using err::{ assert }
+
+fn main() -> int {
+  char *a = "123";
+  char *b = "12345678987654321";
+  char *c = "12345678987654321";
+
+  let x = atoi(a);
+  let y = atol(b);
+  let z = atoll(c);
+
+  log::info("%d %ld %lld", x, y, z);
+  return 0;
+}

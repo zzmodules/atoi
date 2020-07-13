@@ -1,0 +1,19 @@
+[project]
+version = "0.1.0"
+name = "atoi"
+cincludes = []
+cobjects = []
+pkgconfig = []
+cflags = []
+lflags = []
+
+[variants]
+default = []
+
+[dependencies]
+err = "*"
+log = "*"
+types = "*"
+
+[repos]
+types = "git://github.com/zzmodules/types"
